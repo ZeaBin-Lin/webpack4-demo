@@ -1,10 +1,15 @@
 const path = require('path')
 
+const htmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
   mode: 'development', // development不压缩代码
-  entry: path.join(__dirname, './src/app.js'), // 当前目录
+  entry: {
+    app: path.join(__dirname, './src/app.js'), // 当前目录
+    print: path.join(__dirname, './src/print.js'),
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.join(__dirname, 'dist') // 运行时目录
   },
   module: {
@@ -31,6 +36,8 @@ module.exports = {
     ]
   },
   plugins: [
-    
+    new htmlWebpackPlugin({ // 未指定html，自动生成index.html
+      title: 'output Management'
+    })
   ]
 }
