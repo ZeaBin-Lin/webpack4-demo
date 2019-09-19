@@ -10,6 +10,7 @@ function component() {
   var element = document.createElement('div');
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
   element.classList.add('hello');
+  element.classList.add('icon-shangyiye');
   
   // 将图像添加到我们现有的 div。
    var myIcon = new Image();

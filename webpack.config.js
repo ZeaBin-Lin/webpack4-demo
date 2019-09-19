@@ -21,6 +21,12 @@ module.exports = {
         use: [
           'file-loader'
         ]
+      },
+      {
+        test: /\.(eot|ttf|woff|otf|woff2)/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },

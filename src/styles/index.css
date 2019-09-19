@@ -1,4 +1,7 @@
+@import url('./iconfont.css');
+
 .hello {
   color: red;
   background: url('../imgs/yzj.png') no-repeat;
+  font-family: 'iconfont';
 }
