@@ -8,7 +8,15 @@ module.exports = {
     path: path.join(__dirname, 'dist') // 运行时目录
   },
   module: {
-
+    rules: [
+      {
+        test: /.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+    ]
   },
   plugins: [
     
